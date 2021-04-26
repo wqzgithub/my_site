@@ -103,6 +103,9 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+#部署后收集静态文件路径
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_collected')
+
 STATIC_URL = '/static/'
 #指定静态文件路径
 STATICFILES_DIRS =[
