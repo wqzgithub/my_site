@@ -1,0 +1,94 @@
+ul.blog-types{
+    list-style-type: none;
+}
+div.blog h3{
+    /*面板里面的上边距*/
+    margin-top: 0.1em;
+}
+
+/*带标题的面板，每个博客文章分隔开*/
+div.blog:not(:last-child){
+    margin-bottom: 1em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1em;
+}
+div.blog p.blog-info{
+    margin-bottom: 2px;
+}
+/*分页器的属性*/
+div.paginator{
+    text-align: center;
+}
+/*文章内容模块里的的作者，分类，发表时间信息修饰*/
+ul.blog-info-description{
+    /*博客的内容描述不需要点*/
+    list-style-type: none;
+    margin-bottom: 2em;
+}
+ul.blog-info-description li{
+    /*三个信息整成行显示*/
+    display: inline-block;
+    /*三个信息字段的距离*/
+    margin-right: 1em;
+}
+/*文章的具体内容修饰*/
+div.blog-content{
+    /*首行缩进2个字符*/
+    text-indent: 2em;
+    margin-bottom: 2em;
+}
+
+div.blog-more {
+    margin-top: 2em;
+}
+
+/*评论区域*/
+div.comment-area{
+    margin-top: 1em;
+}
+/*提交评论和评论列表区域*/
+h3.comment-area-title{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.4em;
+}
+/*博客列表面板颜色
+div.panel-body{
+    background-color: #F5F5F5;
+}
+*/
+div.django-ckeditor-widget {
+	width: 100%;
+}
+
+/*评论回复列表的css*/
+div.comment{
+    border-bottom: 1px dashed #000000;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+div.reply{
+    margin-left: 2em;
+}
+
+div#reply_content_container {
+    display: none;
+    border: 1px solid #cccccc4a;
+    background-color: #cccccc1c;
+    border-bottom: none;
+    overflow: hidden;
+    padding: 1em 1em 0;
+}
+p#reply_title{
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 1em;
+}
+
+div.like{
+    color: #337ab7;
+    display: inline-block;
+    cursor:pointer;
+    padding: 0.5em 0.3em;
+}
+div.like .active {
+    color: red;
+}

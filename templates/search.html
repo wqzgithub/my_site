@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    搜索
+{% endblock %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="/static/home.css">
+{% endblock %}
+
+{% block nav_home_active %}active{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                {% if search_words == '' %}
+                    <h3>你没有搜索任何内容</h3>
+                    <hr>
+                    <p>你可以尝试输入点什么，例如：Django</p>
+                {% else %}
+                    <h3>搜索“{{ search_words }}”,找到{{ search_blogs_count }}个结果</h3>
+                    <hr>
+                    {% for blog in page_of_blogs %}
+                        <a href="{% url 'blog_detail' blog.pk %}">
+                            <h4>{{ blog.title }}</h4>
+                        </a>
+                        {% autoescape off %}
+                                {{ blog.content|safe|striptags|truncatechars_html:100 }}
+                        {% endautoescape %}
+                        <hr>
+                    {% empty %}
+                        <p>搜索不到任何内容,换个关键词再试试吧</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <div>
+            {% if search_words != '' %}
+                <div class="row" style="display: flex;justify-content: center">
+                    {% if page_of_blogs.has_previous %}
+                        <a class="btn btn-primary" href="{% url 'search' %}?wd={{ search_words }}&page={{ page_of_blogs.previous_page_number }}">
+                            上一页
+                        </a>
+                    {% else %}
+                        {# 如果没有上一页，直接给个文本 #}
+                        <span class="btn btn-default">上一页</span>
+                    {% endif %}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    {% if page_of_blogs.has_next %}
+                        <a class="btn btn-primary" href="{% url 'search' %}?wd={{ search_words }}&page={{ page_of_blogs.next_page_number }}">下一页</a>
+                    {% else %}
+                        {# 如果没有上一页，直接给个文本 #}
+                        <span class="btn btn-default">下一页</span>
+                    {% endif %}
+
+                </div>
+                <p style="display: flex;justify-content: center">共{{ page_of_blogs.paginator.num_pages }}页<br></p>
+                <p style="display: flex;justify-content: center">当前第{{ page_of_blogs.number }}页</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

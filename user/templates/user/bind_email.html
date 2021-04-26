@@ -1,0 +1,56 @@
+{% extends 'form.html' %}
+
+{% block other_buttons %}
+    <button id="send_code" class="btn btn-primary">发送验证码</button>
+{% endblock %}
+
+{% block script_extends %}
+    <script type="text/javascript">
+        $("#send_code").click(function () {
+            var email = $("#id_email").val();
+            var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+            if(email==""){
+                $("#tip").text('* 邮箱不能为空');
+                return false;
+            }
+            if(reg.test(email)){
+                $.ajax({
+                    url : "{% url 'send_verification_code' %}",
+                    type : "GET",
+                    data :{
+                        'email' :email,
+                        'send_for' : 'bind_email_code',
+                        'subject' : '绑定邮箱',
+                    },
+                    cache :false,
+                    success :function () {
+                        if(data['status'] =='ERROR'){
+                            alert(data['status']);
+                        }
+                    }
+                });
+                //发送验证码
+                //把按钮变灰
+                $(this).addClass('disabled');
+                $(this).attr('disabled',true);
+                //倒计时后可点
+                var time = 30;
+                $(this).text(time + 's');
+                var interval = setInterval(() => {
+                    if(time <= 0){
+                        clearInterval(interval);
+                        $(this).removeClass('disabled');
+                        $(this).attr('disabled',false);
+                        $(this).text('重新发送发送验证码');
+                        return false;
+                    }
+                    time --;
+                    $(this).text(time + 's');
+                },1000);
+            }else{
+                //alert("请输入正确的邮箱格式");
+                $("#tip").text('* 请输入正确的邮箱格式');
+            }
+        });
+    </script>
+{% endblock %}

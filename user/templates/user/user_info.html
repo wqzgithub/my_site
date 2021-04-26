@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}用户中心{% endblock %}
+{% block nav_home_active %}active{% endblock %}
+
+
+{% block content %}
+    <div class="containter">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div class="row">
+                    {% if user.is_authenticated %}
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">我的信息</div>
+                                <div class="panel-body">
+                                <div class="">
+                                <h2>{{ user.username }}</h2>
+                                <ul>
+                                    <li>
+                                        <span>昵称: &nbsp;&nbsp;{{ user.get_nickname}}</span>
+                                        <span>
+                                            <a href="{% url 'change_nickname' %}?from={{ request.get_full_path }}">&nbsp;&nbsp;修改昵称</a>
+                                        </span>
+
+                                    </li>
+                                    <li><span>邮箱:&nbsp;&nbsp;</span>
+                                        <span>{% if user.email %}{{ user.email }}{% else %}&nbsp;&nbsp;未绑定</span>
+                                        <span><a href="{% url 'bind_email' %}?from={{ request.get_full_path }}">&nbsp;&nbsp;绑定邮箱</a>{% endif %}</span>
+                                    </li>
+                                    <li>
+                                        <span>上一次登录时间：&nbsp;&nbsp;</span>
+                                        <span>{{ user.last_login|date:"Y-m-d H:i:s" }}</span>
+                                    </li>
+                                    <li>
+                                        <span><a href="{% url 'change_password' %}">修改密码</a></span>
+                                    </li>
+                                </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <span>即将跳转到首页......<span id='sid' style="color: #337ab7;">3</span></span>
+                        <script type="text/javascript">
+                            //window.location.href = '/'
+                            sidobj=document.getElementById('sid');
+                            s=3;
+                            sobj=setInterval(function(){
+                                sidobj.innerHTML=--s;
+                                if(s==0){
+                                    location='/';
+                                }
+                            },1000);
+                        </script>
+                    {% endif %}
+                </div>
+                <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">其他</div>
+                                <div class="panel-body">
+                                    <br>
+                                    <h2>敬请期待！</h2>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    <</div>
+{% endblock %}

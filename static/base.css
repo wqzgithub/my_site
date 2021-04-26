@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    /*blog主体下拉，不要让导航栏盖住*/
+    margin-top: 70px!important;
+}
+ul{
+    /*去掉ul里面的li前面的小黑点*/
+    list-style-type: none!important;
+}
+
+ul.navbar-right {
+    margin-right: 1px;
+}
+
+.search-form button[type="submit"]{
+    background: none;
+    border: none;
+    margin-left: -3em;
+    color: #aaa;
+}
+.search-form {
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+}
+.search-form .form-group {
+    width: 100%;
+    margin-left: 10px;
+}
