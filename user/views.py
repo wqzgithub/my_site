@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse #反向解析
 from django.http import JsonResponse
 from django.core.mail import send_mail
+from django.conf import settings
 from .forms import LoginForm,RegForm,ChangeNicknameForm,BindEmailForm,ChangePasswordForm,ForgotPasswordForm
 from .models import Profile
 
@@ -133,7 +134,7 @@ def send_verification_code(request):
             send_mail(
                 subject,
                 code,
-                '2229381575@qq.com',
+                settings.EMAIL_HOST_USER,
                 [email],
                 fail_silently=False,
             )

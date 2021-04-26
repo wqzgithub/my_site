@@ -39,12 +39,12 @@
     <session id="2080210665">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="20" />
-          <entry key="project.open.time.5" value="4" />
-          <entry key="project.opened" value="28" />
+          <entry key="project.open.time.5" value="5" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -98,11 +98,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/comment/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+              <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
               </folding>
@@ -113,13 +113,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_site/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3703">
-              <caret line="196" column="26" lean-forward="true" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
+            <state relative-caret-position="555">
+              <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="177">
@@ -170,6 +170,9 @@
     <dirStrings>
       <dir>F:\my_bolg\mysite_env\my_site</dir>
     </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -234,12 +237,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="225" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="70" />
+    <option name="y" value="21" />
     <option name="width" value="1585" />
     <option name="height" value="980" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -252,6 +256,24 @@
             <path>
               <item name="my_site" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_site" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_site" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_site" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_site" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_site" type="b2602c69:ProjectViewProjectNode" />
@@ -406,9 +428,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="181" y="20" width="1267" height="783" extended-state="0" />
+    <frame x="180" y="20" width="1268" height="784" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.495" visible="true" weight="0.27295285" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495" visible="true" weight="0.27768594" />
       <window_info id="Structure" order="1" sideWeight="0.505" side_tool="true" weight="0.17989865" />
       <window_info id="Favorites" order="2" sideWeight="0.5046729" side_tool="true" weight="0.36134455" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -792,10 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5">
           <caret line="42" column="42" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="42" />
-          <folding>
-            <element signature="e#28#63#0" expanded="true" />
-            <element signature="e#415#1350#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,20 +834,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comment/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_site/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3703">
-          <caret line="196" column="26" lean-forward="true" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
+        <state relative-caret-position="555">
+          <caret line="196" column="26" selection-start-line="196" selection-start-column="26" selection-end-line="196" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -837,6 +845,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comment/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
