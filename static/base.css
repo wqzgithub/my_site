@@ -6,6 +6,7 @@ body {
     /*blog主体下拉，不要让导航栏盖住*/
     margin-top: 70px!important;
 }
+
 ul{
     /*去掉ul里面的li前面的小黑点*/
     list-style-type: none!important;
@@ -29,4 +30,47 @@ ul.navbar-right {
 .search-form .form-group {
     width: 100%;
     margin-left: 10px;
+}
+
+
+div.footer {
+    margin-top: 3em;
+    background-color: #F5F5F5;
+    color: #555;
+}
+div.website-info {
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 1.5em;
+}
+div.website-info p {
+    padding-bottom: 0;
+}
+
+
+/*弹出微信二维码*/
+div.white_content {
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    background-color: #FFFFFF;
+    z-index: 1002;
+ /* 数字的大小指明了div的相对层，数字大的在上层 */
+    overflow: auto;
+}
+/*弹出微信二维码*/
+div.black_overlay {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #555;
+    z-index: 1001;
+    -moz-opacity: 0.1;
+    opacity: .5;
+    filter: alpha(opacity=30);
 }

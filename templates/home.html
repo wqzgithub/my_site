@@ -16,45 +16,61 @@
 {% endblock %}
 
 {% block content %}
-    <h3 class="home-content">欢迎访问我的blog网站</h3>
+    <h3 class="home-content">WELCOME TO WQZ'S BLOG WEBSITE</h3>
     <!-- 图表容器 DOM -->
     <div id="container"></div>
+    <div class="containter">
     <div class="hot-data">
-            <!--今天24小时内的热门博客-->
-        <h3>今天热门博客</h3>
+        <div class="hot-data-today">
+        <!--今天24小时内的热门博客-->
+            <h3>今天热门博客</h3>
             <ul>
                 {% for hot_data in today_hot_data %}
                    <li><a href="{% url 'blog_detail' hot_data.content_object.pk %}">
                             {{ hot_data.content_object.title }}({{ hot_data.read_num }})</a></li>
                 {% empty %}
-                    <li>今天暂无热门博客</li>
+                    <li>暂无推荐</li>
+                    <li>~~~~~</li>
+                    <li>~~~~~</li>
+                    <li>~~~~~</li>
+                    <li>~~~~~</li>
                 {% endfor %}
             </ul>
-    </div>
-    <div class="hot-data">
-        <!--昨天的热门博客-->
-        <h3>昨天热门博客</h3>
+        </div>
+        <div class="hot-data-yesterday">
+            <!--昨天的热门博客-->
+            <h3>&nbsp&nbsp&nbsp&nbsp昨天热门博客&nbsp&nbsp&nbsp&nbsp</h3>
             <ul>
                 {% for hot_data in yesterday_hot_data %}
                    <li><a href="{% url 'blog_detail' hot_data.content_object.pk %}">
                             {{ hot_data.content_object.title }}({{ hot_data.read_num }})</a></li>
                 {% empty %}
-                    <li>昨天无热门博客</li>
+                    <li>暂无推荐</li>
+                    <li>~~~~~</li>
+                    <li>~~~~~</li>
+                    <li>~~~~~</li>
+                    <li>~~~~~</li>
                 {% endfor %}
             </ul>
+        </div>
+        <div class="hot-data-seven-day">
+            <!--7天内热门博客-->
+            <h3>近7天热门博客</h3>
+                <ul>
+                    {% for hot_blog in hot_blogs_for_7_days %}
+                        <li>{{ hot_data }}</li>
+                        <li><a href="{% url 'blog_detail' hot_blog.id %}">{{ hot_blog.title }}({{ hot_blog.read_num_sum }})</a></li>
+                    {% empty %}
+                        <li>暂无推荐</li>
+                        <li>~~~~~</li>
+                        <li>~~~~~</li>
+                        <li>~~~~~</li>
+                        <li>~~~~~</li>
+                    {% endfor %}
+                </ul>
+        </div>
     </div>
-    <div class="hot-data">
-        <!--7天内热门博客-->
-        <h3>7天内热门博客</h3>
-            <ul>
-                {% for hot_blog in hot_blogs_for_7_days %}
-                    <li>{{ hot_data }}</li>
-                    <li><a href="{% url 'blog_detail' hot_blog.id %}">{{ hot_blog.title }}({{ hot_blog.read_num_sum }})</a></li>
-                {% empty %}
-                    <li>7天内无热门博客</li>
-                {% endfor %}
-            </ul>
-    </div>
+
 
     <script>
         // 图表配置
@@ -87,5 +103,38 @@
         };
         // 图表初始化函数
         var chart = Highcharts.chart('container', options);
+    </script>
+
+        <!--添加备案信息 -->
+    <div class="footer">
+        <div class="website-info">
+            <p>
+                <a href="https://beian.miit.gov.cn/" target="_blank">
+                桂ICP备2021003772号-1</a>
+            </p>
+            <p>
+                Copyright©2021 wqzblog.cn 版权所有 | 意见反馈或联系我(wqz3719@qq.com) | 
+                <a href="#" id="contact_weixin" onclick="openWindow(this)">微信</a>
+            </p> 
+        </div>
+          
+    </div>
+
+    <!--弹出微信二维码-->
+    <div id="light_weixin" class="white_content">  
+        <img src='/static/image/vx.jpg' />  
+    </div>
+    <div id="fade" class="black_overlay"  onClick="closeWindow()"></div>
+    <!--弹出微信二维码-->
+    <script  type="text/javascript">
+        function openWindow(obj){
+            var weixin = "light_weixin";
+            document.getElementById(weixin).style.display='block';
+            document.getElementById('fade').style.display='block';
+        }
+        function closeWindow(){
+            document.getElementById('light_weixin').style.display='none';
+            document.getElementById('fade').style.display='none';
+        }
     </script>
 {% endblock %}

@@ -19,12 +19,13 @@
     {# 引用静态文件块 #}
     {% block header_extends %}{% endblock %}
 </head>
-<body background="/static/image/backp0.jfif " style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;" >
+<body>
+<!-- <body background="/static/image/backp0.jfif " style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;">  -->
     {#背景设置 background="/static/image/backp0.jfif " style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;" #}
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{% url 'home' %}">博客网站
+                <a class="navbar-brand" href="{% url 'home' %}">WQZ'S BLOG
                 </a>
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="icon-bar"></span>
@@ -86,7 +87,11 @@
 
     {# 主体块 #}
     {% block content %}{% endblock %}
-            <!-- Modal -->
+
+    
+
+
+    <!-- Modal -->
     <div class="modal fade" id="login_modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
@@ -132,6 +137,10 @@
             });
         });
     </script>
+
+
     {% block script_extends %}{% endblock %}
+    
+
 </body>
 </html>
