@@ -137,10 +137,40 @@
             });
         });
     </script>
-
-
     {% block script_extends %}{% endblock %}
     
+    <!--添加备案信息 -->
+    <div class="footer">
+        <div class="website-info">
+            <p>
+                <a href="https://beian.miit.gov.cn/" target="_blank">
+                桂ICP备2021003772号-1</a>
+            </p>
+            <p>
+                Copyright©2021 wqzblog.cn 版权所有 | 意见反馈或联系我(wqz3719@qq.com) | 
+                <a href="#" id="contact_weixin" onclick="openWindow(this)">微信</a>
+            </p> 
+        </div>
+          
+    </div>
+
+    <!--弹出微信二维码-->
+    <div id="light_weixin" class="white_content">  
+        <img src='/static/image/vx.jpg' />  
+    </div>
+    <div id="fade" class="black_overlay"  onClick="closeWindow()"></div>
+    <!--弹出微信二维码-->
+    <script  type="text/javascript">
+        function openWindow(obj){
+            var weixin = "light_weixin";
+            document.getElementById(weixin).style.display='block';
+            document.getElementById('fade').style.display='block';
+        }
+        function closeWindow(){
+            document.getElementById('light_weixin').style.display='none';
+            document.getElementById('fade').style.display='none';
+        }
+    </script>
 
 </body>
 </html>
