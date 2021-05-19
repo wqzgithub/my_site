@@ -1,3 +1,6 @@
+body {
+    margin-top: 50px!important;
+}
 h3.home-content {
     font-size: 222%;
     text-align: center;
@@ -14,7 +17,8 @@ div#container{
 
 div.hot-data {
     text-align: center;
-    margin-top: 1em;
+    margin-top: -1em;
+    margin-bottom: 7em;
 
 }
 div.hot-data-today {

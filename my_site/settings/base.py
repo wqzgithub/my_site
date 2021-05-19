@@ -146,7 +146,7 @@ CKEDITOR_CONFIGS = {
 }
 
 #自定义参数
-EACH_PAGE_BLOGS_NUMBER = 5  #分页时候每页的博客文章数量
+EACH_PAGE_BLOGS_NUMBER = 7  #分页时候每页的博客文章数量
 
 
 #数据库高速缓存,
